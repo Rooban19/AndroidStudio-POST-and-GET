@@ -3,6 +3,7 @@ package com.example.loginscreen;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Log.i("REsponseuuu", response);
+                Intent intent = new Intent(getApplicationContext(),ChatList.class);
+                startActivity(intent);
             }
         }, new Response.ErrorListener() {
             @Override
